@@ -1,0 +1,39 @@
+{
+  "name": "anbar-yar",
+  "version": "1.0.0",
+  "description": "انبار یار",
+  "main": "main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "chart.js": "4.4.1",
+    "xlsx": "0.18.5",
+    "sql.js": "1.10.3"
+  },
+  "devDependencies": {
+    "electron": "31.7.7",
+    "electron-builder": "24.13.3"
+  },
+  "build": {
+    "appId": "ir.anbaryar.desktop",
+    "productName": "انبار یار",
+    "files": [
+      "main.js",
+      "www/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "انبار یار",
+      "uninstallDisplayName": "انبار یار"
+    }
+  }
+}
